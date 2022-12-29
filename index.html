@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+	</head>
+	<body>
+		<div class="stage-start">
+			<h1>Invaders</h1>
+			<div class="btn-start">Play</div>
+		</div>
+		<div class="stage-gameOver">
+			<h1>GAME OVER</h1>
+			<div class="btn-replay">Play again?</div>
+		</div>
+
+		<canvas id="game-viewport"></canvas>
+
+		<audio id="invaderAudio0" src="audio/invader1.wav" preload="auto"></audio>
+		<audio id="invaderAudio1" src="audio/invader2.wav" preload="auto"></audio>
+		<audio id="invaderAudio2" src="audio/invader3.wav" preload="auto"></audio>
+		<audio id="invaderAudio3" src="audio/invader4.wav" preload="auto"></audio>
+
+		<audio id="playerShoot" src="audio/shoot.wav" preload="auto"></audio>
+		<audio id="invaderKilled" src="audio/invaderkilled.wav" preload="auto"></audio>
+	</body>
+	<script type="text/javascript">
+		var space_game = null;
+		// Shitty fallback - Don't Really care about old browsers atm.
+		jQuery(function($){
+			space_game = new lambda();
+		});
+	</script>
+</html>
